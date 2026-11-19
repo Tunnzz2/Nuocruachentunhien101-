@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nước rửa chén từ tự nhiên 101% | Tổ 4</title>
+  <style>
+    :root {
+      --forest: #123f2c;
+      --green: #247747;
+      --leaf: #69a95b;
+      --mint: #eaf5e8;
+      --cream: #fffdf4;
+      --gold: #d9b75b;
+      --ink: #20352a
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: #f2f7ef;
+      color: var(--ink);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.65
+    }
+
+    header {
+      background: linear-gradient(135deg, #0d3828, #236d42 58%, #91b95c);
+      color: white;
+      padding: 54px 20px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    header:before,
+    header:after {
+      content: "";
+      position: absolute;
+      border: 1px solid #ffffff35;
+      border-radius: 50%;
+      width: 260px;
+      height: 260px
+    }
+
+    header:before {
+      left: -100px;
+      top: -130px
+    }
+
+    header:after {
+      right: -90px;
+      bottom: -190px
+    }
+
+    .eyebrow {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: #e8efc6;
+      font-weight: 700
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(2rem, 6vw, 4.2rem);
+      line-height: 1.08;
+      margin: 14px auto;
+      max-width: 900px
+    }
+
+    header p {
+      max-width: 680px;
+      margin: 14px auto 0;
+      color: #eff8e9;
+      font-size: 1.05rem
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #fffdf4ed;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #d9e8d8;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px
+    }
+
+    nav a {
+      color: var(--forest);
+      text-decoration: none;
+      font-size: .86rem;
+      font-weight: 700;
+      padding: 7px 11px;
+      border-radius: 20px
+    }
+
+    nav a:hover {
+      background: var(--mint)
+    }
+
+    main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 26px 18px 70px
+    }
+
+    section {
+      background: white;
+      border: 1px solid #e0ebdf;
+      border-radius: 22px;
+      padding: clamp(20px, 4vw, 36px);
+      margin: 22px 0;
+      box-shadow: 0 10px 28px #173e2410
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      color: var(--forest);
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      margin: 0 0 16px
+    }
+
+    h3 {
+      color: #286641;
+      margin: 18px 0 6px
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      color: #385b45
+    }
+
+    .kicker {
+      color: #67916a;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase
+    }
+
+    .hero-card {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: center;
+      background: linear-gradient(120deg, #f3faed, #fff9e7)
+    }
+
+    .product-mark {
+      border-radius: 22px;
+      background: linear-gradient(145deg, #d8efc8, #fff9df);
+      padding: 24px;
+      text-align: center;
+      border: 2px solid #a8cb87
+    }
+
+    .product-mark .big {
+      font-family: Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      color: #17623a;
+      line-height: 1.05
+    }
+
+    .product-mark .percent {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #4b963f
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: .96rem
+    }
+
+    th {
+      background: #194d36;
+      color: white;
+      text-align: left
+    }
+
+    th,
+    td {
+      padding: 13px 14px;
+      border: 1px solid #d8e5d8;
+      vertical-align: top
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f5faf2
+    }
+
+    .amount {
+      white-space: nowrap;
+      font-weight: 800;
+      color: #205d39
+    }
+
+    .note {
+      background: #fff8df;
+      border-left: 4px solid #d8b34d;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin: 16px 0
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px
+    }
+
+    .info {
+      background: #f3f9f0;
+      border: 1px solid #dcebd8;
+      border-radius: 16px;
+      padding: 17px
+    }
+
+    .info strong {
+      color: #1d6039
+    }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 13px
+    }
+
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 15px;
+      background: #f5faf2;
+      border-radius: 14px
+    }
+
+    .step:before {
+      content: counter(step, decimal-leading-zero);
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #267548;
+      color: white;
+      font-weight: 800
+    }
+
+    video {
+      width: 100%;
+      border-radius: 16px;
+      background: #14291d;
+      max-height: 560px
+    }
+
+    .caption {
+      font-size: .9rem;
+      color: #617367
+    }
+
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px
+    }
+
+    .member {
+      background: #f6faf3;
+      border: 1px solid #dbe8d8;
+      border-radius: 14px;
+      padding: 13px
+    }
+
+    .member label {
+      display: block;
+      font-size: .8rem;
+      color: #64806b;
+      font-weight: 700;
+      margin-bottom: 5px
+    }
+
+    .member-name {
+      min-height: 34px;
+      border-bottom: 1px solid #9dbb9b;
+      padding: 7px 2px;
+      color: var(--ink)
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 18px;
+      background: #216b43;
+      color: white;
+      font-weight: 750;
+      cursor: pointer
+    }
+
+    button.secondary {
+      background: #e8f2e4;
+      color: #205d39
+    }
+
+    footer {
+      text-align: center;
+      background: #123f2c;
+      color: #eff8e9;
+      padding: 34px 18px
+    }
+
+    footer p {
+      max-width: 720px;
+      margin: 8px auto
+    }
+
+    .contact-box {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid #ffffff26;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-label {
+      font-size: .85rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #c8e3c4;
+      font-weight: 700;
+    }
+
+    .zalo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+
+    .zalo-link:hover {
+      color: #cfe4ff;
+    }
+
+    .zalo-link svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    @media(max-width:700px) {
+
+      .hero-card,
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .member-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap
+      }
+
+      nav a {
+        white-space: nowrap
+      }
+
+      th,
+      td {
+        padding: 10px 9px;
+        font-size: .88rem
+      }
+    }
+
+    @media print {
+
+      nav,
+      .actions,
+      .contact-box {
+        display: none
+      }
+
+      body {
+        background: white
+      }
+
+      section {
+        box-shadow: none;
+        break-inside: avoid
+      }
+
+      header {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact
+      }
+    }
+
+    /* Lớp nguyên liệu và lá rơi nhẹ phía sau nội dung */
+    .falling-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .fall-item {
+      position: absolute;
+      top: -12vh;
+      left: var(--x);
+      font-size: var(--size);
+      opacity: 0;
+      filter: drop-shadow(0 3px 4px #244b2818);
+      animation: falling var(--duration) linear var(--delay) infinite;
+      will-change: transform, opacity;
+    }
+
+    @keyframes falling {
+      0% {
+        transform: translate3d(0, -8vh, 0) rotate(0deg);
+        opacity: 0
+      }
+
+      8% {
+        opacity: .42
+      }
+
+      50% {
+        transform: translate3d(var(--drift), 55vh, 0) rotate(180deg);
+        opacity: .36
+      }
+
+      92% {
+        opacity: .28
+      }
+
+      100% {
+        transform: translate3d(calc(var(--drift) * -.55), 112vh, 0) rotate(360deg);
+        opacity: 0
+      }
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      position: relative;
+      z-index: 1
+    }
+
+    section {
+      background: rgba(255, 255, 255, .91);
+      backdrop-filter: blur(2px)
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .fall-item {
+        animation: none;
+        display: none
+      }
+    }
+
+    @media print {
+      .falling-layer {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="falling-layer" aria-hidden="true">
+    <span class="fall-item" style="--x:4%;--size:27px;--duration:23s;--delay:-3s;--drift:34px">🍃</span>
+    <span class="fall-item" style="--x:13%;--size:25px;--duration:28s;--delay:-17s;--drift:-28px">🍊</span>
+    <span class="fall-item" style="--x:22%;--size:24px;--duration:25s;--delay:-9s;--drift:30px">🌰</span>
+    <span class="fall-item" style="--x:31%;--size:22px;--duration:30s;--delay:-22s;--drift:-32px">💧</span>
+    <span class="fall-item" style="--x:40%;--size:26px;--duration:24s;--delay:-12s;--drift:25px">🌿</span>
+    <span class="fall-item" style="--x:49%;--size:23px;--duration:29s;--delay:-5s;--drift:-26px">🧴</span>
+    <span class="fall-item" style="--x:58%;--size:25px;--duration:26s;--delay:-19s;--drift:33px">🍃</span>
+    <span class="fall-item" style="--x:67%;--size:23px;--duration:31s;--delay:-14s;--drift:-30px">🧪</span>
+    <span class="fall-item" style="--x:76%;--size:27px;--duration:24s;--delay:-7s;--drift:28px">🍊</span>
+    <span class="fall-item" style="--x:85%;--size:24px;--duration:27s;--delay:-20s;--drift:-24px">🌰</span>
+    <span class="fall-item" style="--x:94%;--size:25px;--duration:30s;--delay:-11s;--drift:29px">🌿</span>
+    <span class="fall-item" style="--x:8%;--size:20px;--duration:32s;--delay:-25s;--drift:-22px">🫧</span>
+    <span class="fall-item" style="--x:36%;--size:21px;--duration:33s;--delay:-28s;--drift:24px">💧</span>
+    <span class="fall-item" style="--x:63%;--size:22px;--duration:34s;--delay:-30s;--drift:-26px">🧴</span>
+    <span class="fall-item" style="--x:91%;--size:21px;--duration:32s;--delay:-24s;--drift:23px">🍃</span>
+  </div>
+
+  <header>
+    <div class="eyebrow">Dự án sản phẩm xanh · Tổ 4</div>
+    <h1>NƯỚC RỬA CHÉN<br>TỪ TỰ NHIÊN 101%</h1>
+    <p>Cam sành và bồ kết – cảm hứng từ những nguyên liệu quen thuộc, hướng đến thói quen làm sạch có ý thức hơn.</p>
+  </header>
+  <nav>
+    <a href="#gioi-thieu">Giới thiệu</a><a href="#thanh-phan">Thành phần</a><a href="#loi-ich">Lợi ích</a><a
+      href="#quy-trinh">Quy trình</a><a href="#su-dung">Cách dùng</a><a href="#thanh-vien">Thành viên</a>
+  </nav>
+  <main>
+    <section id="gioi-thieu" class="hero-card">
+      <div>
+        <div class="kicker">Lời nói đầu</div>
+        <h2>Xin chào thầy cô và các bạn!</h2>
+        <p class="lead">Tổ 4 xin giới thiệu sản phẩm <strong>“Nước rửa chén từ tự nhiên 101%”</strong>, được xây dựng từ
+          ý tưởng tận dụng vỏ cam sành và quả bồ kết – hai nguyên liệu gần gũi trong đời sống.</p>
+        <p>Sản phẩm thử nghiệm kết hợp dịch ngâm vỏ cam sành, dịch chiết bồ kết, glycerol, acid citric, tinh dầu cam và
+          nước cất. Qua dự án, chúng em mong muốn tìm hiểu cách tạo ra một dung dịch rửa chén từ các nguyên liệu có
+          nguồn gốc tự nhiên và nâng cao ý thức sử dụng sản phẩm có trách nhiệm.</p>
+      </div>
+      <div class="product-mark">
+        <div style="font-size:3rem">🍊 🌿</div>
+        <div class="big">NƯỚC RỬA CHÉN</div>
+        <div style="font-family:Georgia,serif;font-size:1.3rem;color:#3e7542">từ tự nhiên</div>
+        <div class="percent">101%</div>
+        <strong style="color:#285c39">TỔ 4</strong>
+      </div>
+    </section>
+
+    <section id="thanh-phan">
+      <div class="kicker">Công thức tham khảo</div>
+      <h2>Bảng thành phần – định mức 300 ml</h2>
+      <p>Bảng dưới đây được trình bày theo đúng định mức trong hình công thức nhóm cung cấp.</p>
+      <div style="overflow-x:auto">
+        <table>
+          <thead>
+            <tr>
+              <th>Thành phần nguyên liệu</th>
+              <th>Định mức / 300 ml</th>
+              <th>Vai trò dự kiến</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Dịch ngâm rượu vỏ cam sành</strong><br>(Từ 100 g vỏ cam + 140–150 ml rượu)</td>
+              <td class="amount">90 ml</td>
+              <td>Dịch ngâm giúp thu các hợp chất thơm từ vỏ cam; tạo mùi hương cam đặc trưng. Thành phần tinh dầu có
+                thể hỗ trợ làm sạch dầu mỡ, tùy nồng độ thực tế.</td>
+            </tr>
+            <tr>
+              <td><strong>Dịch chiết quả bồ kết khô</strong><br>(Từ 35 g bồ kết nướng + 200 ml nước)</td>
+              <td class="amount">150 ml</td>
+              <td>Bồ kết chứa saponin – nhóm chất có khả năng tạo bọt và hỗ trợ cuốn trôi chất bẩn.</td>
+            </tr>
+            <tr>
+              <td><strong>Glycerol (tinh khiết)</strong></td>
+              <td class="amount">15 ml</td>
+              <td>Chất giữ ẩm, giúp hạn chế cảm giác khô căng; không đồng nghĩa sản phẩm đã được chứng minh an toàn cho
+                mọi loại da.</td>
+            </tr>
+            <tr>
+              <td><strong>Citric acid (bột tinh khiết)</strong></td>
+              <td class="amount">2–3 g</td>
+              <td>Có thể dùng để điều chỉnh độ pH của dung dịch. Cần đo pH sau khi pha để xác định lượng phù hợp.</td>
+            </tr>
+            <tr>
+              <td><strong>Tinh dầu cam nguyên chất</strong></td>
+              <td class="amount">1–2 ml</td>
+              <td>Tạo hương cam dễ chịu; cần phân tán đồng đều trong hỗn hợp.</td>
+            </tr>
+            <tr>
+              <td><strong>Nước cất (bổ sung vừa đủ)</strong></td>
+              <td class="amount">43–44 ml</td>
+              <td>Dùng để bổ sung thể tích và điều chỉnh độ loãng của thành phẩm.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><strong>Lưu ý về định mức:</strong> Các khoảng định lượng trong ảnh có thể khiến tổng thể tích
+        cộng lại chênh nhẹ so với 300 ml. Khi thực hành, cần kiểm tra thể tích cuối và bổ sung nước cất vừa đủ theo công
+        thức đã được nhóm thử nghiệm xác nhận.</div>
+      <div class="note"><strong>Lưu ý khoa học:</strong> Đây là phân tích vai trò dự kiến dựa trên đặc tính thường gặp
+        của nguyên liệu, không phải kết quả kiểm nghiệm thành phẩm. Nhóm không nên khẳng định “diệt khuẩn”, “an toàn
+        tuyệt đối” hoặc “không gây kích ứng” nếu chưa có kiểm nghiệm.</div>
+    </section>
+
+    <section id="loi-ich">
+      <div class="kicker">Giá trị của sản phẩm</div>
+      <h2>Lợi ích hướng đến</h2>
+      <div class="grid">
+        <div class="info"><strong>🍊 Tận dụng vỏ cam sành</strong><br>Khuyến khích tái sử dụng phần vỏ cam sau khi ăn
+          hoặc chế biến, thay vì bỏ đi ngay.</div>
+        <div class="info"><strong>🌰 Khai thác bồ kết</strong><br>Tìm hiểu saponin tự nhiên trong bồ kết và ứng dụng
+          truyền thống của nguyên liệu này.</div>
+        <div class="info"><strong>💧 Công thức có nguồn gốc thực vật</strong><br>Kết hợp dịch chiết thực vật với các
+          thành phần hỗ trợ để tạo dung dịch rửa chén thử nghiệm.</div>
+        <div class="info"><strong>🌱 Nâng cao ý thức môi trường</strong><br>Khuyến khích lựa chọn nguyên liệu hợp lý, sử
+          dụng vừa đủ và hạn chế lãng phí trong sinh hoạt.</div>
+      </div>
+      <p class="caption">Hiệu quả làm sạch, khả năng phân hủy và mức độ an toàn môi trường cần được đánh giá bằng thử
+        nghiệm thực tế; không thể suy ra chỉ từ nguồn gốc tự nhiên của nguyên liệu.</p>
+    </section>
+
+    <section id="quy-trinh">
+      <div class="kicker">Theo video thực hành của nhóm</div>
+      <h2>Quá trình thực hiện</h2>
+      <p>Video nhóm ghi lại chủ yếu hai công đoạn điều chế dịch ngâm vỏ cam và dịch chiết bồ kết. Sau đó, các dịch chiết
+        được dùng làm nguyên liệu cho bước phối trộn theo bảng định mức.</p>
+      <video controls preload="metadata">
+        <source src="video_quy_trinh_to4.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ phát video.
+      </video>
+      <h3>A. Điều chế dịch ngâm vỏ cam sành</h3>
+      <div class="steps">
+        <div class="step">
+          <div><strong>Rửa sạch vỏ cam sành</strong><br>Loại bỏ bụi bẩn và phần không mong muốn trên vỏ.</div>
+        </div>
+        <div class="step">
+          <div><strong>Cắt nhỏ, thái mỏng</strong><br>Cắt vỏ thành các miếng nhỏ để tăng diện tích tiếp xúc khi ngâm.
+          </div>
+        </div>
+        <div class="step">
+          <div><strong>Cho vào lọ thủy tinh sạch có nắp</strong><br>Đựng phần vỏ cam đã sơ chế trong lọ.</div>
+        </div>
+        <div class="step">
+          <div><strong>Thêm rượu ngập phần vỏ</strong><br>Video thể hiện nhóm sử dụng khoảng 150 ml rượu để ngâm vỏ cam.
+            Công thức thành phẩm ghi dịch ngâm được dùng là 90 ml.</div>
+        </div>
+      </div>
+      <h3>B. Điều chế dịch chiết bồ kết</h3>
+      <div class="steps">
+        <div class="step">
+          <div><strong>Nướng bồ kết</strong><br>Làm nóng bồ kết trên vỉ, thực hiện cẩn thận và tránh để cháy thành than.
+          </div>
+        </div>
+        <div class="step">
+          <div><strong>Tách hạt, lấy phần vỏ</strong><br>Video ghi lượng bồ kết là khoảng 35 g.</div>
+        </div>
+        <div class="step">
+          <div><strong>Đun với 200 ml nước</strong><br>Đun phần bồ kết với nước trong khoảng 20 phút như nội dung video.
+          </div>
+        </div>
+        <div class="step">
+          <div><strong>Lọc dịch chiết</strong><br>Lọc nhiều lần (video ghi lọc lần 2, lần 3) để loại bỏ bã, thu phần
+            dịch.</div>
+        </div>
+      </div>
+      <h3>C. Phối trộn thành phẩm</h3>
+      <p>Video được gửi kết thúc ở phần thu dịch chiết, chưa trình bày đầy đủ thao tác phối trộn thành phẩm. Dựa trên
+        bảng công thức, bước tiếp theo của nhóm là đong các dịch chiết và thành phần còn lại đúng định mức, khuấy đều,
+        kiểm tra độ đồng nhất và đo pH trước khi chiết vào chai sạch. Chỉ sử dụng thành phẩm sau khi đã đánh giá chất
+        lượng và độ an toàn phù hợp.</p>
+    </section>
+
+    <section id="su-dung">
+      <div class="kicker">Hướng dẫn sử dụng</div>
+      <h2>Sử dụng đúng cách</h2>
+      <div class="steps">
+        <div class="step">
+          <div><strong>Làm ướt chén đĩa</strong><br>Loại bỏ thức ăn thừa trước khi rửa.</div>
+        </div>
+        <div class="step">
+          <div><strong>Lấy một lượng nhỏ dung dịch</strong><br>Cho lên miếng rửa chén ẩm; không cần dùng quá nhiều.
+          </div>
+        </div>
+        <div class="step">
+          <div><strong>Chà rửa bề mặt</strong><br>Làm sạch chén, đĩa, nồi và dụng cụ nhà bếp phù hợp.</div>
+        </div>
+        <div class="step">
+          <div><strong>Tráng lại thật kỹ bằng nước sạch</strong><br>Đảm bảo không còn cặn dung dịch trên vật dụng trước
+            khi sử dụng.</div>
+        </div>
+      </div>
+      <div class="note"><strong>Khuyến cáo:</strong> Đây là sản phẩm thử nghiệm trong dự án học tập, chưa có dữ liệu
+        kiểm nghiệm để xác nhận khả năng làm sạch hoặc an toàn khi sử dụng rộng rãi. Không uống; tránh tiếp xúc với mắt;
+        để xa tầm tay trẻ nhỏ. Người có da nhạy cảm nên tránh tiếp xúc trực tiếp và ngừng sử dụng nếu có dấu hiệu kích
+        ứng.</div>
+      <div class="note"><strong>An toàn khi chế biến:</strong> Rượu dễ cháy; tuyệt đối không đổ rượu hoặc dịch ngâm có
+        cồn gần lửa, bếp đang cháy hay nguồn nhiệt. Để dịch ngâm xa khu vực nướng/đun bồ kết và thao tác ở nơi thông
+        thoáng.</div>
+    </section>
+
+    <section id="thanh-vien">
+      <div class="kicker">Tập thể thực hiện</div>
+      <h2>Thành viên Tổ 4</h2>
+      <div class="member-grid">
+        <div class="member"><label>Thành viên 01</label>
+          <div class="member-name">Lý Nhật Tân</div>
+        </div>
+        <div class="member"><label>Thành viên 02</label>
+          <div class="member-name">Đỗ Bùi Thảo Nguyên</div>
+        </div>
+        <div class="member"><label>Thành viên 03</label>
+          <div class="member-name">Trần Chánh Hùng</div>
+        </div>
+        <div class="member"><label>Thành viên 04</label>
+          <div class="member-name">Nguyễn Đức Tùng</div>
+        </div>
+        <div class="member"><label>Thành viên 05</label>
+          <div class="member-name">Nguyễn Thị Kiều Oanh</div>
+        </div>
+        <div class="member"><label>Thành viên 06</label>
+          <div class="member-name">Đào Như Ngọc</div>
+        </div>
+        <div class="member"><label>Thành viên 07</label>
+          <div class="member-name">Vũ Hoàng Anh</div>
+        </div>
+        <div class="member"><label>Thành viên 08</label>
+          <div class="member-name">Phạm Thị Thanh Thuý</div>
+        </div>
+        <div class="member"><label>Thành viên 09</label>
+          <div class="member-name">Phan Mai Cẩm Thy</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button onclick="window.print()">In / Lưu PDF</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="kicker">Lời cảm ơn và lời kết</div>
+      <h2>Trân trọng cảm ơn!</h2>
+      <p class="lead">Tổ 4 xin chân thành cảm ơn thầy cô và các bạn đã dành thời gian theo dõi, lắng nghe và góp ý cho
+        sản phẩm.</p>
+      <p>Thông qua quá trình tìm hiểu và thực hiện, chúng em có cơ hội vận dụng kiến thức vào thực tế, rèn luyện kỹ năng
+        làm việc nhóm và hiểu thêm về việc khai thác các nguyên liệu quen thuộc. Sản phẩm vẫn cần được tiếp tục thử
+        nghiệm, hoàn thiện công thức và đánh giá chất lượng trước khi có thể ứng dụng rộng rãi.</p>
+      <p><strong>Thông điệp của Tổ 4:</strong> Bắt đầu từ những nguyên liệu gần gũi, cùng lan tỏa ý thức sống xanh và sử
+        dụng tài nguyên có trách nhiệm.</p>
+    </section>
+  </main>
+  <footer>
+    <div style="font-size:1.8rem">🍊 🌿</div>
+    <strong>TỔ 4 · NƯỚC RỬA CHÉN TỪ TỰ NHIÊN 101%</strong>
+    <p>Cảm ơn thầy cô và các bạn đã theo dõi!</p>
+    <div class="contact-box">
+      <div class="contact-label">Liên hệ</div>
+      <a class="zalo-link" href="https://zalo.me/0387320872" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <rect width="48" height="48" rx="12" fill="#0068ff" />
+          <text x="24" y="30" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16"
+            font-weight="900">Z</text>
+        </svg>
+        <span>zalo.me/0387320872</span>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
